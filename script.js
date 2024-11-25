@@ -1,9 +1,11 @@
+//Função para fazer o computador escolher entre pedra, papel e tesoura
 function getComputerChoice() {
     const choices = ['pedra', 'papel', 'tesoura'];
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
 
+//Função para determinar o vencedor pegando o valor do computador e o valor de entrada
 function determineWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         return "Empate!";
@@ -20,6 +22,7 @@ function determineWinner(playerChoice, computerChoice) {
     }
 }
 
+//Função para que a pessoa possa escolher um valor de entrada
 function playGame() {
     let playerChoice = prompt("Escolha: pedra, papel ou tesoura").toLowerCase();
 
@@ -32,6 +35,7 @@ function playGame() {
 
     const computerChoice = getComputerChoice();
 
+//Alertando o resultado da partida
     alert(`Você escolheu: ${playerChoice}`);
     alert(`O computador escolheu: ${computerChoice}`);
 
